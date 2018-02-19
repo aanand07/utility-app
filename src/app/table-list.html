@@ -1,0 +1,85 @@
+<table>
+    <thead>
+      <tr>
+        <td style="width:1350px"><b> ObjectNames</b></td>
+        <!-- <td style="width:337.5px"><b>Model</b></td>
+        <td style="width:337.5px"><b>StoredProcedures</b></td>
+        <td style="width:337.5px"><b>ApiFunc</b></td> -->
+      </tr>
+    </thead>
+    <tbody>
+      <!-- <tr>
+        {{tDet[0]}}
+      </tr> -->
+    <tr><a id="nr" (click)="collapsed=!collapsed"><b>Click here to view the TableNames</b></a>
+      </tr>
+    <tr *ngIf="collapsed"><ul *ngFor="let t of tNames"><input type="checkbox" id="chbox">
+      <a (click)="tDetails(t)">
+      {{t}}</a>
+    </ul>
+    </tr>
+    
+    <tr><a id="nr" (click)="collapsed1=!collapsed1"><b>Click here to view the Views</b></a>
+    </tr>
+  <tr *ngIf="collapsed1"><ul *ngFor="let t of vNames">
+    {{t}}
+  </ul>
+</tr>
+
+    <tr><a id="nr" (click)="collapsed2=!collapsed2"><b>Click here to view the StoredProcedures</b></a>
+    </tr>
+  <tr *ngIf="collapsed2"><ul *ngFor="let t of spNames">
+    {{t}}
+  </ul>
+</tr>
+
+    <tr>
+        <a id="nr" (click)="collapsed3=!collapsed3"><b>Click here to view the Triggers</b></a>
+      </tr>
+    <tr *ngIf="collapsed3"><ul *ngFor="let t of triggerNames">>
+      {{t}}
+    </ul>
+    </tr>
+
+    <tr>
+        <a id="nr" (click)="collapsed4=!collapsed4"><b>Click here to view the Functions</b></a>
+      </tr>
+    <tr *ngIf="collapsed4"><ul *ngFor="let t of functionNames">
+      {{t}}
+    </ul>
+    </tr>
+  </tbody>
+  </table>
+  <button id="btn" (click)="generateCode()"><b> GenerateCode</b></button>
+ 
+<style>
+  table{
+    table-layout: fixed;
+    word-wrap: break-word;
+    width: "100%";
+    border: 2px solid black
+  }
+   td{
+    border: 2px solid black;
+    word-wrap: break-word;
+    background-color:bisque
+   }
+   tr{
+    word-wrap: break-word
+   }
+   #nr{
+    display: inline-block;
+    font-size:19px;
+    background-color:aqua
+   }
+  #btn{
+    text-align: center;
+    background-color:yellow;
+    font-size:19px
+  }
+
+input[type=checkbox]:not(checked) ~ #btn {
+  display:none; 
+}
+</style>
+

@@ -1,0 +1,31 @@
+<head>
+  <style>
+      table,tr {
+           border: 2px solid black;
+         
+          margin-left: auto;
+          margin-right: auto;
+      }
+         
+      body {
+      text-align:center;
+      }
+    
+  </style>
+</head>
+<body>
+ <div>
+   
+ <p><b>Access to DB Objects</b> </p>
+  <table style="width:600px">
+      <tr><td>Server Name :</td><td> <input type="text"  #serverName  placeholder="Enter server name here" style="width:400px"></td></tr>
+      <tr><td>Database Name :</td><td> <input type="text" #dbname  placeholder="Enter database name here" style="width:400px"></td></tr>
+      <tr><td>Name :</td> <td> <input type="text" #name  placeholder="Enter name here" style="width:400px" required></td></tr>
+      <tr><td>Password :</td> <td> <input type="password" #passWord  placeholder="Enter password here" style="width:400px" required></td></tr>
+  </table>
+  
+<button (click)="myFunc(serverName.value,dbname.value,name.value,passWord.value)" ><b>GO!!</b></button> 
+
+
+</div>
+  
